@@ -27,5 +27,9 @@ while True:
 
         sleep(1)
         print(ret.result, "Test")
+        
+        # Converts RAM info into a percentage
+        RAMInfo = psutil.virtual_memory()
+        RAMPercent = (RAMInfo[3]/RAMInfo[1])*100
     
     # Code for normal use below this point
